@@ -1,0 +1,14 @@
+
+# Ignore Python cache directories (__pycache__) in any subfolder
+__pycache__/
+**/__pycache__/
+
+# Ignore PyTorch model files (.pt)
+*.pt
+
+/bodmas
+/models
+/output
+/output_results
+/plots
+/hyper_parameter_test_results
