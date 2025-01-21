@@ -15,3 +15,4 @@ __pycache__/
 /experiment_results
 test_new_env.py
 conda_env.sh
+/experiment_results copy
