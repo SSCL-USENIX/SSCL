@@ -8,7 +8,7 @@ python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --
 - `--training_cutoff`: Defines the cutoff point for separating training and testing data.
 - `--lr`: Sets the learning rate for the model's optimizer.
 - `--wd`: Determines the weight decay for optimizer regularization.
-- `--label_ratio`: Specifies the ratio of labeled data to be used during training.
+- `--label_ratio`: Specifies the ratio of labeled data for seen tasks used during training.
 - `--nps`: Number of projection samples for constructing gradient projection Memory.
 - `--bool_gpm`: Enables or disables the gradient projection mechanism.
 - `--b_m`: Sets the batch memory ratio for training.
@@ -18,10 +18,7 @@ python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --
 
 #### To run it on your device
 
-Use the requirements.txt file to install the required libraries.
-
-Use Python Version 3.8.13
-and Cuda Version v11.6.0
+**Use the requirements.txt file to install the required libraries.Use Python Version 3.8.13 and Cuda Version v11.6.0**
 
 
 ## 1. Baseline Methods
@@ -41,15 +38,29 @@ where:
 - `--label_ratio`: label ratio (e.g., 1)
 
 ## 2. Continual Learning Methods:
+For MIR and CBRS
 ```bash
 python3 SSCL_cl.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<method>
 ```
-For MIR and CBRS
 
+where:
+- `--ds`: dataset name (e.g., 'api_graph', 'androzoo', 'bodmas')
+- `--lr`: learning rate (e.g., 0.001)
+- `--wd`: weight decay (e.g., 0.0001)
+- `--training_cutoff`: training cutoff value (e.g., 12, 5)
+- `--cl_method`: Continual Learning method ( 'MIR', 'CBRS')
+FOR EWC and AGEM
 ```bash
 python3 SSCL_cl_implemented.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<EWC_or_AGEM>
 ```
-FOR EWC and AGEM
+where:
+- `--ds`: dataset name (e.g., 'api_graph', 'androzoo', 'bodmas')
+- `--lr`: learning rate (e.g., 0.001)
+- `--wd`: weight decay (e.g., 0.0001)
+- `--training_cutoff`: training cutoff value (e.g., 12, 5)
+- `--cl_method`: Continual Learning method ( 'EWC', 'AGEM')
+
+
 ## Dataset:
 Edit the Metadata.py file to change the dataset path.
 
