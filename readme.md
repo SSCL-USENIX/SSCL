@@ -18,12 +18,12 @@ python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --
 
 #### To run it on your device
 
-**Use the requirements.txt file to install the required libraries.Use Python Version 3.8.13 and Cuda Version v11.6.0**
+**Use the requirements.txt file to install the required libraries.**
+**Use Python Version 3.8.13 and Cuda Version v11.6.0**
 
 
 ## 1. Baseline Methods
 
-To run the baseline methods, you can use the following command:
 Below command is for HCL method and CADE
 ```bash
 python3 SSCL_main_HCL_CADE.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --family_info=<true_or_false> --label_ratio=1 --uncertainity=<sample_selector>
@@ -35,12 +35,12 @@ where:
 - `--training_cutoff`: training cutoff value (e.g., 12, 5)
 - `--family_info`: true or false (e.g., true)
 - `--uncertainity`: sample selector (e.g., 'pseudo-loss', 'cade')
-- `--label_ratio`: label ratio (e.g., 1)
+- `--label_ratio`: label ratio (e.g., 1,0.2)
 
 ## 2. Continual Learning Methods:
 For MIR and CBRS
 ```bash
-python3 SSCL_cl_implemented.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<EWC_or_AGEM>
+python3 SSCL_cl_implemented.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<method>
 ```
 
 where:
