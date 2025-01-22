@@ -1,19 +1,29 @@
 
 ## To Run our Method 
-You can find the command with specific hyper parameters in the configurations.md.
+#### **You can find the command with specific hyper parameters in the configurations.md.**
 ```bash
-python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay>  --label_ratio=1 --nps=<int> --bool_gpm=<bool> --b_m=<float> --bma=<float>  --analyst_labels=<int> --temp=<float>
+python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay>  --label_ratio=1 --nps=<int> --bool_gpm=<bool> --b_m=<float> --bma=<float>  --analyst_labels=<int> --upper_threshold=<float>
 ```
 - `--ds`: Specifies the name of the dataset to use.
 - `--training_cutoff`: Defines the cutoff point for separating training and testing data.
 - `--lr`: Sets the learning rate for the model's optimizer.
 - `--wd`: Determines the weight decay for optimizer regularization.
 - `--label_ratio`: Specifies the ratio of labeled data to be used during training.
-- `--nps`: Number of projection samples for contrastive learning.
+- `--nps`: Number of projection samples for constructing gradient projection Memory.
 - `--bool_gpm`: Enables or disables the gradient projection mechanism.
 - `--b_m`: Sets the batch memory ratio for training.
 - `--bma`: Allocates the batch minority ratio during training.
-- `--analyst_labels`: Number of labeled samples provided by analysts for semi-supervised learning.
+- `--upper_thresh`:Maximum Upper threshold on cosine distance to find the suitable label samples .
+- `--analyst_labels`: Number of labeled samples provided by analysts for semi-supervised learning. 
+
+#### To run it on your device
+
+Use the requirements.txt file to install the required libraries.
+
+Use Python Version 3.8.13
+and Cuda Version v11.6.0
+
+
 ## 1. Baseline Methods
 
 To run the baseline methods, you can use the following command:
