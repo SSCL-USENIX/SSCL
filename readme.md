@@ -40,7 +40,7 @@ where:
 ## 2. Continual Learning Methods:
 For MIR and CBRS
 ```bash
-python3 SSCL_cl.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<method>
+python3 SSCL_cl_implemented.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<EWC_or_AGEM>
 ```
 
 where:
@@ -49,10 +49,12 @@ where:
 - `--wd`: weight decay (e.g., 0.0001)
 - `--training_cutoff`: training cutoff value (e.g., 12, 5)
 - `--cl_method`: Continual Learning method ( 'MIR', 'CBRS')
+
 FOR EWC and AGEM
 ```bash
-python3 SSCL_cl_implemented.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<EWC_or_AGEM>
+python3 SSCL_cl.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<method>
 ```
+
 where:
 - `--ds`: dataset name (e.g., 'api_graph', 'androzoo', 'bodmas')
 - `--lr`: learning rate (e.g., 0.001)
