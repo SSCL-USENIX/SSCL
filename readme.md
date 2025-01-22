@@ -49,7 +49,7 @@ where:
 - `--wd`: weight decay (e.g., 0.0001)
 - `--training_cutoff`: training cutoff value (e.g., 12, 5)
 - `--cl_method`: Continual Learning method ( 'MIR', 'CBRS')
-
+---
 FOR EWC and AGEM
 ```bash
 python3 SSCL_cl.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay> --cl_method=<method>
