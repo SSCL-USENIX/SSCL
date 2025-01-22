@@ -1,6 +1,7 @@
 
 ## To Run our Method 
 #### **You can find the command with specific hyper parameters in the configurations.md.**
+**The Drive link to the dataset** : https://drive.google.com/drive/folders/1Y8oBeMAbrQzpOItXQdjN1bvn_HvId5D2?usp=sharing
 ```bash
 python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --lr=<learning_rate> --wd=<weight_decay>  --label_ratio=1 --nps=<int> --bool_gpm=<bool> --b_m=<float> --bma=<float>  --analyst_labels=<int> --upper_threshold=<float>
 ```
