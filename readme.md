@@ -8,7 +8,7 @@ python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --
 - `--training_cutoff`: Defines the cutoff point for separating training and testing data.
 - `--lr`: Sets the learning rate for the model's optimizer.
 - `--wd`: Determines the weight decay for optimizer regularization.
-- `--label_ratio`: Specifies the ratio of labeled data for seen tasks used during training.
+- `--label_ratio`: Specifies the ratio of labeled data for seen tasks used during training(0.2 for 20 %).
 - `--nps`: Number of projection samples for constructing gradient projection Memory.
 - `--bool_gpm`: Enables or disables the gradient projection mechanism.
 - `--b_m`: Sets the batch memory ratio for training.
@@ -19,6 +19,7 @@ python3 SSCL_main.py --ds=<dataset> --training_cutoff=<training_cutoff_value> --
 #### To run it on your device
 
 **Use the requirements.txt file to install the required libraries.**
+
 **Use Python Version 3.8.13 and Cuda Version v11.6.0**
 
 
